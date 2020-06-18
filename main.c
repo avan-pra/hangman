@@ -166,7 +166,9 @@ int main(void)
 		pendax(fail);
 		if (fail >= 7)
 		{
-			write(1, "you loose\n", 10);
+			write(1, "\nle mot etait: ", 15);
+			write(1, to_find, strlen(to_find));
+			write(1, "\nyou loose\n", 11);
 			free(guess);
 			free(to_find);
 			return (1);
@@ -192,6 +194,8 @@ int main(void)
 			pendax(fail);
 			write(1, keys.b, 3);
 			print_base(to_find, guess);
+			write(1, "\nle mot etait: ", 15);
+			write(1, to_find, strlen(to_find));
 			free(guess);
 			free(to_find);
 			write(1, "\nwell played\n", 13);
